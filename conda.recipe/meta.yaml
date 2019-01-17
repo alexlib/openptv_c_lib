@@ -1,0 +1,22 @@
+package:
+  name: openptv_c_lib
+  version: 0.0.1
+
+source:
+  git_url: https://github.com/alexlib/openptv_c_lib.git
+  git_tag: master 
+
+requirements:
+  build:
+    - cmake
+    - check
+
+build:
+
+  # already linked relative to $ORIGIN, so we need to turn
+  # off conda's relocation mechanism because it screws it up
+  binary_relocation: false
+
+about:
+  home: https://github.com/alexlib/openptv_c_lib.git
+  license:  LGPL
